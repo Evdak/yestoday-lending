@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div class="container-fluid my-3">
+    <div class="container-fluid my-3 py-5">
         <div class="row d-flex justify-content-center">
             <div class="col-xs-10 col-md-7 d-flex flex-column justify-content-center text-center">
                 <h1 class="text-danger mb-3 custom-bold">
@@ -18,8 +18,9 @@
                 </h3>
                 <h3 class="custom-bold"> Мы поможем вам в этом!</h3>
             </div>
-            <div class="col-xs-2 col-md-4">
-                <img src="header.png" alt="" class="img-fluid">
+            <div class="col-xs-2 col-md-3">
+                <img src="https://fs.getcourse.ru/fileservice/file/download/a/505632/sc/7/h/4f9871ccc0576a72a6e162982650064b.png"
+                    alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -45,7 +46,8 @@
                     </h4>
                 </div>
                 <div class="col-md-4">
-                    <img src="block2.png" alt="" class="img-fluid p-5">
+                    <img src="https://fs.getcourse.ru/fileservice/file/download/a/505632/sc/469/h/c4aafaa3fc850ff71e69bc0efca0c066.png"
+                        alt="" class="img-fluid p-5">
                 </div>
             </div>
         </div>
@@ -126,7 +128,8 @@
                     </h4>
                 </div>
                 <div class="col-md-4">
-                    <img src="block4.png" alt="" class="img-fluid p-5">
+                    <img src="https://fs.getcourse.ru/fileservice/file/download/a/505632/sc/167/h/c951ff5e2f1d07f758365504972edf5d.png"
+                        alt="" class="img-fluid p-5">
                 </div>
             </div>
         </div>
@@ -141,7 +144,8 @@
                 </h3>
             </div>
             <div class="col-md-5">
-                <img src="block5.png" alt="" class="img-fluid p-5">
+                <img src="https://fs.getcourse.ru/fileservice/file/download/a/505632/sc/297/h/44e66b4cfde14a6e27f808e4b64cd8b2.png"
+                    alt="" class="img-fluid p-5">
             </div>
         </div>
     </div>
@@ -162,7 +166,8 @@
                     </ul>
                 </div>
                 <div class="col-md-2 p-4">
-                    <img src="block6.png" alt="" class="img-fluid">
+                    <img src="https://fs.getcourse.ru/fileservice/file/download/a/505632/sc/120/h/14d874d7b142636700aa3123ca3ddd2b.png"
+                        alt="" class="img-fluid">
                 </div>
                 <div class="col-md-5">
                     <h3 class="text-black">
@@ -179,10 +184,10 @@
         <section class="pt-5 pb-5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
-                        <h3 class="mb-3">Так же с данным уровнем вы сможете:</h3>
+                    <div class="col-8">
+                        <h3 class="mb-3 px-5">Так же с данным уровнем вы сможете:</h3>
                     </div>
-                    <div class="col-6 text-right">
+                    <div class="col-4 text-right">
                         <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
                             data-slide="prev">
                             <i class="fa fa-arrow-left"></i>
@@ -398,4 +403,19 @@
         color: #5199ff;
         font-weight: 800;
     }
+
+    div.container-fluid :is(h1, h2, h3, h4, h5, h6, p, span) {
+        transform: scale(1.1);
+    }
+
+    .card-text:last-child {
+        padding: 30px;
+    }
 </style>
+
+<script>
+    $("div.container-fluid:not(#div2-wrapper) :is(h1, h2, h3, h4, h5, h6, p, span)").toArray().forEach(element => {
+        curSize = parseInt($(element).css('font-size')) + 5;
+        $(element).css('font-size', curSize);
+    });
+</script>
